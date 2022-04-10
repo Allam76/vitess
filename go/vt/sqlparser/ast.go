@@ -3414,7 +3414,7 @@ func (node ProcedureName) IsEmpty() bool {
 // This means two TableName vars can be compared for equality
 // and a TableName can also be used as key in a map.
 type TableName struct {
-	Name, Qualifier TableIdent
+	Name, Schema, Qualifier TableIdent
 }
 
 // Format formats the node.

@@ -4420,6 +4420,10 @@ table_name:
   {
     $$ = TableName{Qualifier: $1, Name: $3}
   }
+| table_id '.' table_id '.' reserved_table_id
+  {
+    $$ = TableName{Qualifier: $1, Schema: $3, Name: $5}
+  }
 
 procedure_name:
   sql_id
